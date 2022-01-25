@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+
+$colorBg:hsla(33, 100%, 53%, 1);
+$bgGradient:linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+$primaryColor:#FFFDD0;
+$textColor:#000;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// (required font-size/browser font-size)* 100 =(10/16)*100=62.5%.
+html{
+    font-size:62.5%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: $colorBg;
+    background: $bgGradient;
+}
+
+
+header{
+    height: 100%;
+    .todo-logo{
+        display: flex;
+        h1{
+            font-size: 2.7rem;
+            text-transform: uppercase;
+            align-self: center;
+        }
+        img{
+            width: 70px;
+        }
+    }
+    
+    
+}
+
+.main-container{
+    width: 100%;
+    margin: auto;
+}
+.container{
+    
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+    margin-top: 2rem;
+    
+    .input-div{
+        
+         height:10vh ;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 100%;
+         
+        
+        input{
+            background-color: $primaryColor;
+            height: 3rem;
+            width: 100%;
+            padding: 0.3rem;
+            text-transform: capitalize;
+            font-size: 2rem;
+            border: 0;
+            outline: 0;
+            border-radius: 4px;
+            
+        }
+        
+        i{
+            margin: 0 0.7rem;
+            
+        }
+        #del-all{
+            font-size: 2.2rem;
+            @extend #add-icon;
+            
+        }
+          #add-icon{
+            cursor: pointer;
+            background-color: transparent;
+            border: 0;
+           }
+    }
+    
+} 
+
+
+#to-do-items{
+height: 100%;
+margin-top: 30px;
+padding: 0.5rem;
+word-break: break-all;
+text-transform: capitalize;
+.list-item{
+    display: flex;
+    background-color: $primaryColor;
+    box-shadow: 0 3px 5px rgba($color: #000000, $alpha:0.4);
+    margin-top: 0.6rem;
+    padding: 1rem;
+}
+
+button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    width: 25px;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0.3rem;
+
+}
+p{
+    font-size: 2.1rem;
+    margin-right: auto;
+    margin-left: 15px;
+
+}
+
+p.done{
+    text-decoration: line-through;
+    }
+ .complete.done{
+    color:$primaryColor;
+  background-color: rgb(0, 128, 0);
+  border-radius: 50%;  
+ }
+ .delete:hover{
+background-color: rgb(255, 0, 0);
+@extend .complete.done;
+ }
+
+}
+
+
+@media(max-width:480px){
+    .container{
+        width: 100%;
+    }
+     #to-do-items{
+        p{
+            font-size: 1.5rem;
+        }
+        button{
+            padding: 0.2rem;
+            margin: 0.2rem;
+            width: fit-content;
+            
+        }
+    }i{
+        font-size: 1.5rem;
+    }
+    #add-icon{
+        font-size: 1rem;
+    }
+      .todo-logo{
+          flex-direction: column;
+          
+          align-items: center;
+          h1{
+              margin-top: 10px;
+            
+          }
+      }
+}
+
+
+

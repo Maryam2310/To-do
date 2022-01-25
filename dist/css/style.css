@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #ff930f;
+  background: -webkit-gradient(linear, left top, right top, from(#ff930f), to(#fffa5c));
+  background: linear-gradient(90deg, #ff930f 0%, #fffa5c 100%);
+}
+
+header {
+  height: 100%;
+}
+
+header .todo-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .todo-logo h1 {
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .todo-logo img {
+  width: 70px;
+}
+
+.main-container {
+  width: 100%;
+  margin: auto;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  height: 100vh;
+  margin-top: 2rem;
+}
+
+.container .input-div {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.container .input-div input {
+  background-color: #FFFDD0;
+  height: 3rem;
+  width: 100%;
+  padding: 0.3rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+}
+
+.container .input-div i {
+  margin: 0 0.7rem;
+}
+
+.container .input-div #del-all {
+  font-size: 2.2rem;
+}
+
+.container .input-div #add-icon, .container .input-div #del-all {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+#to-do-items {
+  height: 100%;
+  margin-top: 30px;
+  padding: 0.5rem;
+  word-break: break-all;
+  text-transform: capitalize;
+}
+
+#to-do-items .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFFDD0;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  margin-top: 0.6rem;
+  padding: 1rem;
+}
+
+#to-do-items button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  width: 25px;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.3rem;
+}
+
+#to-do-items p {
+  font-size: 2.1rem;
+  margin-right: auto;
+  margin-left: 15px;
+}
+
+#to-do-items p.done {
+  text-decoration: line-through;
+}
+
+#to-do-items .complete.done, #to-do-items .delete:hover {
+  color: #FFFDD0;
+  background-color: green;
+  border-radius: 50%;
+}
+
+#to-do-items .delete:hover {
+  background-color: red;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  #to-do-items p {
+    font-size: 1.5rem;
+  }
+  #to-do-items button {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  i {
+    font-size: 1.5rem;
+  }
+  #add-icon, .container .input-div #del-all {
+    font-size: 1rem;
+  }
+  .todo-logo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .todo-logo h1 {
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
