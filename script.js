@@ -1,4 +1,4 @@
-//get data from localstorage and if there is no data then pass as empty array
+//get data from localstorage and if there is no data then pass an empty array
 let itemArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
 
